@@ -1,0 +1,88 @@
+    /* Common styles for all boxes */
+    .box {
+      color: white;
+      font-weight: bold;
+      padding: 20px;
+      margin: 5px;
+      text-align: center;
+    }
+    .box1 { background: green; }
+    .box2 { background: orange; }
+    .box3 { background: blue; }
+    .box4 { background: red; }
+
+    /* Give all containers some border and space */
+    .container {
+      border: 2px solid black;
+      margin-bottom: 30px;
+      height: 150px; /* enough height to show vertical alignment */
+      display: flex; /* all flex containers start here */
+    }
+
+    /*DIRECTION*/
+
+    .direction-row{ /*This arranges the objects in the container in a row from left to right*/
+      flex-direction: row;
+    }
+
+    .direction-row-reverse{ /*This arranges the objects in the container in a row from right to left*/
+      flex-direction: row-reverse;
+    }
+
+    .direction-column{ /*This arranges the objects in the container in a column from top to bottom*/
+      flex-direction: column;
+    }
+
+    .direction-column-reverse{ /*This arranges the objects in the container in a column from bottom to top*/
+      flex-direction: column-reverse;
+    }
+
+    /*JUSTIFY*/
+
+    .justify-center{ /*This keeps the objects in the center of the container.*/
+    justify-content: center;
+    }
+    
+    .justify-between{ /*This forces objects to span across the length of the container with equal spacing between them.*/
+      justify-content: space-between;
+    }
+
+    .justify-around{ /*This forces objects to span across the length of the container with equal spacing on either side of each*/
+      justify-content: space-around;
+    }
+
+    .justify-evenly{ /*This forces objects to be placed evenly across the container.*/
+      justify-content: space-evenly;
+    }
+
+    /*ALIGN*/
+
+    .align-start{ /*Aligns items to the top*/
+      align-items: flex-start;
+    }
+
+    .align-center{ /*Aligns items to the center*/
+    align-items: center;
+    }
+
+    .align-end{ /*Aligns items to the bottom*/
+      align-items: flex-end;
+    }
+
+    /*FLEX WRAP*/
+
+    .narrow {
+      width: 200px;
+    }
+
+    .nowrap{ /*Default, no new lines added*/
+      flex-wrap: nowrap;
+    }
+
+    .wrap{ /*Items move down a line when they run out of space in the container.*/
+      flex-wrap: wrap;
+    }
+
+    .wrap-reverse{ /*Items move up a line when they run out of space in the container.*/
+      flex-wrap: wrap-reverse;
+    }
