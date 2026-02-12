@@ -104,3 +104,33 @@ section h3 + p {
 
 /* =========================
    7) ID selector - #unique
+   Problem: The colors make the text hard to read.
+   Task: Fix text and background color, and add spacing to make it stand out.
+*/
+#unique {
+    color: rgb(0, 0, 0);
+    background-color: rgb(189, 224, 250);
+    padding: 15px;
+    margin-right: 30px;
+}
+
+/* =========================
+   8) Image styling
+   Problem: Images have no styling.
+   Task: Add a border, margin, and control the size.
+*/
+img {
+   border: solid 5px blue;
+   margin: 50px;
+   width: 200px;
+}
+
+/* =========================
+   9) Footer styling
+   Problem: Footer has no styling.
+   Task: Add small, centered text and a border on top.
+*/
+footer {
+   justify-items: center;
+   border: solid 2px black;
+}
