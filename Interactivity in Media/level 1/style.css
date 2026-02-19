@@ -1,0 +1,108 @@
+/* Before clicking the button */
+.red {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+}
+
+/* After clicking the button, the box will turn blue */ 
+.red.blue {
+    background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* 
+    GLOBAL STYLES
+    ----------------
+    These styles apply to the entire page.
+    We use a dark background to create a cinematic feel
+    and help the color change stand out clearly.
+*/
+
+body {
+    margin: 0;                          /* Removes default browser spacing */
+    height: 100vh;                      /* Makes body fill full screen height */
+    display: flex;                      /* Enables flexible layout */
+    flex-direction: column;             /* Stacks items vertically */
+    justify-content: center;             /* Centers items vertically */
+    align-items: center;                 /* Centers items horizontally */
+    background-color: #0f0f0f;           /* Dark cinematic black background */
+    font-family: Arial, sans-serif;      /* Simple, readable font */
+    color: white;                        /* Default text color */
+}
+
+/* 
+    BOX STYLES
+    ----------------
+    This is the visual object we will manipulate using JavaScript.
+*/
+
+.red {
+    width: 200px;                        /* Box width */
+    height: 200px;                       /* Box height */
+    background-color: red;               /* Initial color */
+    display: flex;                       /* Enables centering text */
+    justify-content: center;             /* Center text horizontally */
+    align-items: center;                 /* Center text vertically */
+    border-radius: 8px;                  /* Slightly rounded corners */
+    margin-bottom: 20px;                 /* Space between box and button */
+    transition: background-color 0.3s;  /* Smooth color transition */
+}
+
+/* 
+    TEXT INSIDE THE BOX
+*/
+
+.red p {
+    margin: 0;                           /* Removes default paragraph margin */
+    font-size: 16px;
+}
+
+/* 
+    BUTTON STYLES
+    ----------------
+    Simple, modern button that feels clickable.
+*/
+
+button {
+    padding: 10px 20px;                  /* Button size */
+    font-size: 16px;
+    background-color: #1e1e1e;           /* Dark gray button */
+    color: white;                        /* Button text color */
+    border: 1px solid #444;              /* Subtle border */
+    border-radius: 5px;                  /* Rounded corners */
+    cursor: pointer;                     /* Hand cursor on hover */
+}
+
+/* 
+    BUTTON HOVER EFFECT
+    ----------------
+    Gives feedback that the button is interactive.
+*/
+
+button:hover {
+    background-color: #333;              /* Slightly lighter on hover */
+}
