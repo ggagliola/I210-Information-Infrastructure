@@ -23,3 +23,101 @@ h1, h2 {
   font-weight: bold;
   color: black;
 }
+
+.shadow1 {
+  text-shadow: 5px 5px;
+}
+
+.shadow2 {
+  text-shadow: 5px 5px 3px #ccc;
+}
+
+.shadow3 {
+  text-shadow: -5px -5px 3px green;
+}
+
+.shadow4 {
+  text-shadow: 0 0 3px red;
+}
+
+.shadow5 {
+  text-shadow: 0 0 10px violet, 10px 10px 5px blue, -5px -5px 3px green;
+}
+
+#box1 {
+  background: yellow;
+  box-shadow: 5px 5px;
+}
+
+#box2 {
+  background: green;
+  box-shadow: inset 5px 5px;
+}
+
+#box3 {
+  background: blue;
+  box-shadow: -5px -5px 3px red;
+}
+
+#box4 {
+  background: violet;
+  box-shadow: 5px 5px 5px 5px black;
+}
+
+#box5 {
+  background: orange;
+  box-shadow: -5px -5px 3px gray, 10px 10px 5px brown;
+}
+
+/* Rounded Corners */
+/* Values apply clockwise */
+.round1 {
+background: lightblue;
+border-radius: 40px;
+}
+
+.round2 {
+  background: lightcoral;
+  border-radius: 40px 10px;
+}
+
+.round3 {
+  background: lightgreen;
+  border-radius: 40px 10px 0px 60px;
+}
+
+.round4 {
+  background: lightgoldenrodyellow;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Gradients */
+.grad1 {
+  background: linear-gradient(green, yellow);
+}
+
+.grad2 {
+  background: linear-gradient(to bottom right, blue, red);
+  color: azure;
+}
+
+.grad3 {
+  background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+}
+
+.grad4 {
+  background: repeating-linear-gradient(to left, blue, yellow, green 33%);
+}
+
+.grad5 {
+  background: radial-gradient(yellow, green);
+}
+
+.grad6 {
+  background: radial-gradient(yellow 20%, green 50%);
+}
+
+.grad7 {
+  background: radial-gradient(circle, red 20%, yellow 50%);
+}
