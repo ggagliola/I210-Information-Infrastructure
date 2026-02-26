@@ -6,6 +6,69 @@
     <title>Contact Us</title>
 </head>
 <body>
-    <header></header>
+    <header>Contact Forms Inc.</header>
+
+    <main>
+        <h1>Contact Us</h1>
+
+        <form action="formPost.html" method="get">
+            <fieldset>
+                <legend>Contact Information</legend>
+
+                <label for="Name">Full Name</label>
+                <input type="text" id="name">
+                <br>
+                <br>
+
+                <label for="Email">Email</label>
+                <input type="email" id="email">
+                <br>
+                <br>
+
+                <label for="Phone">Phone #</label>
+                <input type="phone" id="phone">
+                <br>
+                <br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Other Information</legend>
+
+                <label>Are you a student?</label>
+                <input type="radio" id="yes" name="yes" value="yes" checked>
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="no" value="no">
+                <label for="no">No</label>
+                <br>
+                <br>
+
+                <label for="year">Year of Study</label>
+                <select name="year" id="year">
+                    <option value="non-student">N/A</option>
+                    <option value="freshman">Freshman</option>
+                    <option value="sophomore">Sophomore</option>
+                    <option value="junior">Junior</option>
+                    <option value="senior">Senior</option>
+                </select>
+                <br>
+                <br>
+
+                <label for="enjoyment">Do You Enjoy Your Major?</label>
+                1 (Hate) <input type="range" min="1" max="5" step="1"> 5 (Love)
+                <br>
+                <br>
+
+                <label for="comments">Additional Comments</label><br>
+                <textarea name="comments" id="comments"></textarea>
+            </fieldset>
+            <br>
+
+            <input type="submit" value="Submit Form">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Contact Forms Inc</p>
+    </footer>
 </body>
 </html>
