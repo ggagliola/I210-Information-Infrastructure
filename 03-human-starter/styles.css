@@ -1,0 +1,562 @@
+/* ============================================================
+   I210 — CSS Character Starter Template
+   styles.css
+
+   HOW TO USE THIS FILE:
+   - Read the comments (the gray text starting with //)
+   - Find the section that says YOUR CUSTOMIZATION ZONE
+   - Change the colors and values to match your partner!
+
+   TABLE OF CONTENTS:
+   1.  Base & Page Styles
+   2.  Stage & Card Container
+   3.  ★ YOUR CUSTOMIZATION ZONE ★
+       - Hair
+       - Head 
+       - Ears
+       - Eyes
+       - Nose
+       - Mouth
+       - Neck
+       - Body / Shirt
+       - Collar
+       - Arms & Hands
+       - Name Tag
+   4.  @keyframes Animations (add yours here!)
+   5.  Instructions Panel & Guide Grid
+   6.  Footer
+============================================================ */
+
+
+/* ============================================================
+   1. BASE & PAGE STYLES
+============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #2c3e50;
+  line-height: 1.7;
+}
+
+h1 {
+  background-color: #2c3e50;
+  color: white;
+  padding: 28px 40px;
+  font-size: 1.8rem;
+}
+
+h1 + p {
+  background-color: #34495e;
+  color: #bdc3c7;
+  padding: 12px 40px;
+  font-size: 0.93rem;
+  border-bottom: 4px solid #3498db;
+}
+
+code {
+  background-color: rgba(52,152,219,0.15);
+  color: #2980b9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85em;
+}
+
+strong { color: #e74c3c; }
+
+
+/* ============================================================
+   2. STAGE & CARD CONTAINER
+   The stage centers the character card on the page.
+============================================================ */
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px 20px;
+  background: #e8ecf0;
+  border-bottom: 3px solid #bdc3c7;
+}
+
+/* ── The card that contains the whole person ── */
+.character-card {
+  position: relative;    /* everything inside is positioned relative to this */
+  width: 220px;
+  height: 320px;
+
+  /* ─── CHANGE THIS: card background color ─── */
+  background: linear-gradient(160deg, #dfe6e9, #b2bec3);
+
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  overflow: visible;     /* lets arms and hair stick outside the card */
+}
+
+.hint {
+  margin-top: 16px;
+  color: #7f8c8d;
+  font-size: 0.85rem;
+}
+
+
+/* ============================================================
+   3. ★ YOUR CUSTOMIZATION ZONE ★
+   ─────────────────────────────────────────────────────────
+   STUDENT: This is where you make changes!
+   Each part has a comment telling you what to change.
+============================================================ */
+
+
+/* ── HAIR ──────────────────────────────────────────────── */
+/*
+   CHANGE: background-color — pick your partner's hair color
+   Common values: #1a1a1a (black), #8B4513 (brown),
+   #FFD700 (blonde), #FF4500 (red), #C0C0C0 (grey), #FF69B4 (pink dye)
+*/
+.hair {
+  position: absolute;
+  top: 0px;            /* sticks up above the head */
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 40px;
+  height: 15px;
+
+  /* ─── CHANGE THIS to your partner's hair color ─── */
+  background-color: #8B4513;
+
+  /* Rounded top creates a natural hair shape */
+  border-radius: 50% 50% 0 0;
+  z-index: 1;            /* sits behind the head */
+}
+
+
+/* ── HEAD ──────────────────────────────────────────────── */
+/*
+   Tip: search "Head color hex codes" for a good match
+ 
+*/
+.head {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 86px;
+  height: 90px;
+
+  background-color: #f0c48a;
+
+  border-radius: 50% 50% 45% 45% / 50% 50% 40% 40%;  /* oval face shape */
+  z-index: 2;   /* sits in front of hair */
+
+  box-shadow: inset -4px -4px 10px rgba(0,0,0,0.1);
+}
+
+
+/* ── EARS ──────────────────────────────────────────────── */
+.ear {
+  position: absolute;
+  top: 36px;
+
+  width: 14px;
+  height: 18px;
+  border-radius: 50%;
+
+  /* ─── CHANGE THIS to match .head  color ─── */
+  background-color: #e8b97a;
+
+  z-index: 1;    /* sits behind the head */
+}
+
+.ear-left  { left:  -7px; }  /* sticks out to the left  */
+.ear-right { right: -7px; }  /* sticks out to the right */
+
+
+/* ── EYES ──────────────────────────────────────────────── */
+/* The white of the eye */
+.eye {
+  position: absolute;
+  top: 30px;
+
+  width: 16px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: pink;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.15);
+}
+
+.eye-left  { left: 16px; }
+.eye-right { right: 16px; }
+
+/* The iris / pupil */
+/*
+   CHANGE: background-color — use your partner's eye color
+   Common values: #4a4a4a (dark brown), #5D4037 (brown),
+   #42A5F5 (blue), #66BB6A (green), #78909C (grey)
+*/
+.pupil {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin: 2.5px auto 0;
+
+  /* ─── CHANGE THIS to your partner's eye color ─── */
+  background-color: grey;
+
+  position: relative;
+}
+
+/* White glint (makes the eye look alive) */
+.pupil::after {
+  content: '';
+  display: block;
+  width: 3px;
+  height: 3px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
+
+/* ── NOSE ──────────────────────────────────────────────── */
+/* Small triangle / oval nose in the center of the face */
+.nose {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 10px;
+  height: 8px;
+  border-radius: 30% 30% 50% 50%;  /* rounded bottom creates a nose tip */
+
+ 
+  background-color: #d4a070;
+}
+
+
+/* ── MOUTH ──────────────────────────────────────────────── */
+/*
+   This is a simple curved smile using border-radius.
+   CHANGE: border-radius values to change the smile shape.
+   Try: border-radius: 50% = big round smile
+        border-radius: 10% = small subtle smile
+*/
+.mouth {
+  position: absolute;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 30px;
+  height: 12px;
+
+  /* The trick: only bottom border-radius creates the smile curve */
+  border-radius: 0 0 50% 50%;
+  border-bottom: 25px solid #c0756a;  /* the visible smile line */
+  border-left:   1.5px solid #c0756a;
+  border-right:  1.5px solid #c0756a;
+  border-top:    none;
+  background:    transparent;
+}
+
+
+/* ── NECK ──────────────────────────────────────────────── */
+.neck {
+  position: absolute;
+  top: 96px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 28px;
+  height: 24px;
+
+  /* ─── CHANGE THIS to match .head  color ─── */
+  background-color: #f0c48a;
+  z-index: 1;
+}
+
+
+/* ── BODY / SHIRT ──────────────────────────────────────── */
+/*
+   CHANGE: background-color (or background) to your partner's shirt
+   Try a solid color or a gradient!
+   Example gradient: linear-gradient(to bottom, #3498db, #2c80b9)
+*/
+.body {
+  position: absolute;
+  top: 116px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 110px;
+  height: 120px;
+
+  /* ─── CHANGE THIS to your partner's shirt color ─── */
+  background-color: #1d1c1c;
+
+  /* Rounded top edge where the shirt meets the neck */
+  border-radius: 10px 10px 16px 16px;
+
+  box-shadow: inset -6px -6px 16px rgba(0,0,0,0.12);
+  position: absolute;
+  z-index: 1;
+}
+
+
+/* ── COLLAR ──────────────────────────────────────────────── */
+/* Two triangles that form a shirt collar (V-neck style) */
+.collar {
+  position: absolute;
+  top: 0;
+
+  width: 0;
+  height: 0;
+
+  /* CSS triangle trick using borders */
+  border-top: 18px solid #1d1c1c; /* collar color — match card background */
+}
+
+.collar-left {
+  left: 36px;
+  border-right: 14px solid transparent;
+}
+
+.collar-right {
+  right: 36px;
+  border-left: 14px solid transparent;
+}
+
+
+/* ── ARMS ──────────────────────────────────────────────── */
+/* Match the shirt color used in .body */
+.arm {
+  position: absolute;
+  top: 6px;
+
+  width: 22px;
+  height: 80px;
+  border-radius: 11px;
+
+  /* ─── CHANGE THIS to match .body shirt color ─── */
+  background-color: #1d1c1c;  /* slightly darker than shirt for shading */
+}
+
+.arm-left  { left:  -24px; }  /* sticks out to the left  */
+.arm-right { right: -24px; }  /* sticks out to the right */
+
+
+/* ── HANDS ──────────────────────────────────────────────── */
+.hand {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 24px;
+  height: 22px;
+  border-radius: 50%;   /* round hand */
+
+  background-color: #f0c48a;
+}
+
+
+/* ── NAME TAG ──────────────────────────────────────────── */
+/*
+   This shows your partner's name at the bottom of the card.
+   CHANGE: the HTML — swap "Partner Name" for their actual name.
+   You can also change the colors here if you want.
+*/
+.name-tag {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: white;
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 5px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  letter-spacing: 0.5px;
+}
+
+
+/* ============================================================
+   4. @keyframes ANIMATIONS
+   ─────────────────────────────────────────────────────────
+   STUDENT: Add your animation here!
+   Then apply it to any element above using:
+   animation: yourAnimationName 1s ease infinite;
+
+   Here is one example already written for you.
+   Find .head above and add: animation: headBob 1.5s ease infinite;
+============================================================ */
+
+/* ── EXAMPLE: Gentle head bob up and down ── */
+@keyframes headBob {
+  0%   { transform: translateX(-50%) translateY(0px); }
+  50%  { transform: translateX(-50%) translateY(-6px); }
+  100% { transform: translateX(-50%) translateY(0px); }
+}
+
+.head {
+  /* ... other styles ... */
+  animation: headBob 1.5s ease infinite;
+}
+
+/*
+   ─── WRITE YOUR OWN ANIMATION BELOW ───────────────────
+
+   @keyframes myAnimation {
+     0%   {  }
+     50%  {  }
+     100% {  }
+   }
+
+   Then add it to any element:
+   .hair {
+     animation: myAnimation 1s ease infinite;
+   }
+
+   ────────────────────────────────────────────────────
+*/
+
+@keyframes hairBob {
+    0% {
+        transform: translateX(-50%) translateY(0px);
+      }
+    
+      50% {
+        transform: translateX(-50%) translateY(-6px);
+      }
+    
+      100% {
+        transform: translateX(-50%) translateY(0px);
+      }
+}
+.hair {
+  animation: hairBob 1.5s ease infinite;
+}
+
+@keyframes leftarmMove {
+  0% {transform: translateY(0);}
+  50% {transform: translateY(50%);}
+  100% {transform: translateY(0);}
+}
+.arm-left {
+  animation: leftarmMove 1.5s ease infinite;
+}
+
+@keyframes rightarmMove {
+  0% {
+    transform: translateY(50%);
+  }
+
+  50% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(50%);
+  }
+}
+
+.arm-right {
+  animation: rightarmMove 1.5s ease infinite;
+}
+
+/* ============================================================
+   5. INSTRUCTIONS PANEL & GUIDE GRID
+============================================================ */
+.instructions {
+  background-color: #ffeaa7;
+  border-left: 5px solid #fdcb6e;
+  padding: 28px 40px;
+}
+
+.instructions h2 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+  border-bottom: 2px solid #fdcb6e;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.instructions ol {
+  margin-left: 20px;
+  line-height: 2.2;
+  font-size: 0.95rem;
+  color: #2c3e50;
+}
+
+/* Guide grid below the character */
+.css-guide {
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+.css-guide h2 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  display: inline-block;
+  margin-bottom: 24px;
+  padding-bottom: 5px;
+}
+
+/* 3-column grid of hint cards */
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 800px;
+}
+
+.guide-item {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 18px;
+  border-top: 3px solid #3498db;
+}
+
+.guide-item h3 {
+  font-size: 0.95rem;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.guide-item p {
+  font-size: 0.82rem;
+  color: #7f8c8d;
+  line-height: 1.5;
+  max-width: none;
+  margin: 0;
+}
+
+
+/* ============================================================
+   6. FOOTER
+============================================================ */
+footer {
+  background-color: #2c3e50;
+  color: #7f8c8d;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  border-top: 3px solid #3498db;
+}

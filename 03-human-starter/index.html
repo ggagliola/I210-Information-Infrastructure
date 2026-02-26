@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Character Starter — I210 Lab Activity</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>CSS Character — Starter Code</h1>
+  <p>
+    This is your <strong>starter template</strong> for the in-class activity.
+    Every part of the person below is a <code>&lt;div&gt;</code> — styled using only CSS.
+    Your job: change the colors, shapes, and animations to represent the person sitting in front of you!
+  </p>
+
+  <section class="instructions">
+    <h2>Your Tasks</h2>
+    <ol>
+      <li>Open <code>styles.css</code> and find the section labeled <code>/* YOUR CUSTOMIZATION */</code></li>
+      <li>Change the  <strong>hair color</strong>, and <strong>clothing color</strong> to match your partner</li>
+      <li>Update the <strong>name tag</strong> in the HTML with your partner's name</li>
+      <li>Add at least <strong>one @keyframes animation</strong> to any part of the character</li>
+      <li>Change the background color of the card to match a color your partner likes</li>
+    </ol>
+  </section>
+
+  <!-- =====================================================
+       THE CHARACTER CARD — all parts are CSS divs
+       Each div has a clear class name so you can find it
+       in the CSS file and change it.
+  ====================================================== -->
+  <section class="stage">
+
+    <div class="character-card">
+
+      <!-- ── HAIR (sits behind the head) ──────────────── -->
+      <div class="hair"></div>
+
+      <!-- ── HEAD ──────────────────────────────────────── -->
+      <div class="head">
+        <!-- Eyes -->
+        <div class="eye eye-left">
+          <div class="pupil"></div>
+        </div>
+        <div class="eye eye-right">
+          <div class="pupil"></div>
+        </div>
+
+        <!-- Nose -->
+        <div class="nose"></div>
+
+        <!-- Mouth / smile -->
+        <div class="mouth"></div>
+
+        <!-- Ears -->
+        <div class="ear ear-left"></div>
+        <div class="ear ear-right"></div>
+      </div>
+
+      <!-- ── NECK ──────────────────────────────────────── -->
+      <div class="neck"></div>
+
+      <!-- ── BODY (shirt) ──────────────────────────────── -->
+      <div class="body">
+        <!-- Shirt collar -->
+        <div class="collar collar-left"></div>
+        <div class="collar collar-right"></div>
+
+        <!-- Left arm -->
+        <div class="arm arm-left">
+          <div class="hand hand-left"></div>
+        </div>
+
+        <!-- Right arm -->
+        <div class="arm arm-right">
+          <div class="hand hand-right"></div>
+        </div>
+      </div>
+
+      <!-- ── NAME TAG ───────────────────────────────────── -->
+      <!-- TODO: Change "Partner Name" to your partner's name -->
+      <div class="name-tag">Partner Name</div>
+
+    </div>
+
+    <p class="hint">👆 Change the name tag and colors in styles.css!</p>
+
+  </section>
+
+  <section class="css-guide">
+    <h2>CSS Parts You Can Change</h2>
+    <div class="guide-grid">
+      <div class="guide-item">
+  <h3>Head Color</h3>
+  <p>Find <code>.head</code> in the CSS and change <code>background-color</code> to a color your partner likes or that represents their personality.</p>
+</div>
+      <div class="guide-item">
+        <h3>Hair Color</h3>
+        <p>Find <code>.hair</code> and change <code>background-color</code> to match your partner's hair</p>
+      </div>
+      <div class="guide-item">
+        <h3>Shirt Color</h3>
+        <p>Find <code>.body</code> and change <code>background-color</code> or add a <code>linear-gradient</code></p>
+      </div>
+      <div class="guide-item">
+        <h3>Eye Color</h3>
+        <p>Find <code>.pupil</code> and change the <code>background-color</code> to match eye color</p>
+      </div>
+      <div class="guide-item">
+        <h3>Card Background</h3>
+        <p>Find <code>.character-card</code> and change the <code>background</code> property</p>
+      </div>
+      <div class="guide-item">
+        <h3>Add Animation</h3>
+        <p>Add a <code>@keyframes</code> and apply it to <code>.head</code> or <code>.hair</code> to make it wave or bounce</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>I210 · CSS Character Starter · In-Class Activity</p>
+  </footer>
+
+</body>
+</html>
