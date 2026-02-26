@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Keyframes & Hover — I210</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>CSS Animations &amp; Keyframes — I210</h1>
+  <p>This page shows three animation concepts. Read the section title, look at the box, then check the CSS file to see how it works.</p>
+
+  <!-- ====================================================
+       SECTION 1: FADE IN
+       The box starts invisible and slowly appears.
+  ==================================================== -->
+  <section class="example">
+    <h2>1. Fade In</h2>
+    <p>
+      The box starts at <code>opacity: 0</code> (invisible) and ends at
+      <code>opacity: 1</code> (visible). The <code>@keyframes</code> rule
+      named <code>fadeIn</code> controls this. It runs once when the page loads.
+    </p>
+    <div class="box box-fade">I fade in</div>
+  </section>
+
+  <!-- ====================================================
+       SECTION 2: MOVE (TRANSLATE)
+       The box slides from left to right and loops.
+  ==================================================== -->
+  <section class="example">
+    <h2>2. Move (Translate)</h2>
+    <p>
+      <code>translateX()</code> moves the box left or right.
+      At <code>0%</code> it is at its normal spot.
+      At <code>50%</code> it has moved 200px to the right.
+      At <code>100%</code> it comes back. This loops forever.
+    </p>
+    <div class="box box-move">I move left to right</div>
+  </section>
+
+  <!-- ====================================================
+       SECTION 3: HOVER
+       Three cards each showing a different hover effect.
+  ==================================================== -->
+  <section class="example">
+    <h2>3. Hover Effects</h2>
+    <p>
+      No <code>@keyframes</code> needed for hover.
+      The <code>transition</code> property smoothly changes between
+      the normal state and the <code>:hover</code> state.
+      Move your mouse over each card.
+    </p>
+    <div class="card-row">
+      <div class="card card-color">Color Change</div>
+      <div class="card card-lift">Lift Up</div>
+      <div class="card card-grow">Grow</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      @keyframes = define the stages &nbsp;|&nbsp;
+      animation = attach it to an element &nbsp;|&nbsp;
+      transition + :hover = smooth hover change
+    </p>
+  </footer>
+
+</body>
+</html>

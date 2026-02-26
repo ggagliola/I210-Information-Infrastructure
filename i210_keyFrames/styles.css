@@ -1,0 +1,143 @@
+/* ============================================================
+   I210 — CSS Keyframes Demo
+   styles.css
+   ============================================================ */
+
+
+/* ============================================================
+   GENERAL CSS
+   Applies to everything on the page.
+============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #2c3e50;
+  line-height: 1.7;
+}
+
+h1 {
+  background-color: #2c3e50;
+  color: white;
+  padding: 24px 40px;
+  font-size: 1.8rem;
+}
+
+h1 + p {
+  background-color: #34495e;
+  color: #bdc3c7;
+  padding: 12px 40px;
+  border-bottom: 4px solid #e74c3c;
+}
+
+code {
+  background-color: #eaf0fb;
+  color: #c0392b;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.87em;
+}
+
+.example {
+  padding: 40px;
+  border-bottom: 1px solid #dde3ea;
+  background-color: #ffffff;
+}
+
+.example h2 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #e74c3c;
+  display: inline-block;
+}
+
+.example p {
+  margin-bottom: 20px;
+  max-width: 620px;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: #7f8c8d;
+  padding: 20px 40px;
+  font-size: 0.88rem;
+}
+
+
+/* ============================================================
+   .box — shared base for Section 1 and Section 2 boxes only
+   (color and size live here so each box looks the same base)
+============================================================ */
+
+.box {
+  width: 200px;
+  padding: 18px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* FADEIN */
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.box-fade {
+  background-color: red;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+/* TRANSLATE (MOVE) */
+/* SLIDE Right */
+@keyframes slideRight {
+  0% {transform: translateX(0px);}
+  50% {transform: translateX(200px);}
+  100% {transform: translateX(0px);}
+}
+
+.box-move {
+  background-color: orange;
+  animation: slideRight 3s infinite;
+}
+
+.card-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 160px;
+  padding: 22px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.card-color:hover{
+  background-color: blue;
+  color: white;
+}
+
+.card-lift:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px gray;
+}
+
+.card-grow:hover {
+  transform: scale(1.1);
+}
